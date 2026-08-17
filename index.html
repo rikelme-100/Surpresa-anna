@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Para Anna Lourdes ❤️</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1a001f, #4b0b52, #17001a);
+            color: white;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 430px;
+            text-align: center;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.10);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            padding: 35px 25px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+            animation: aparecer 0.8s ease;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+
+        .subtitle {
+            color: #ddd;
+            margin-bottom: 30px;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 10px;
+            outline: none;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            margin-top: 18px;
+            border: none;
+            border-radius: 10px;
+            background: #ff4fa3;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        button:hover {
+            transform: scale(1.03);
+            background: #ff2f91;
+        }
+
+        #erro {
+            color: #ff8f8f;
+            margin-top: 15px;
+            display: none;
+        }
+
+        #aba1,
+        #aba2 {
+            display: none;
+        }
+
+        .coracao {
+            font-size: 55px;
+            margin-bottom: 15px;
+            animation: pulsar 1.5s infinite;
+        }
+
+        .texto {
+            margin-top: 25px;
+            line-height: 1.8;
+            color: #f5f5f5;
+            white-space: pre-line;
+            text-align: center;
+        }
+
+        .pequeno {
+            margin-top: 20px;
+            color: #ddd;
+            font-size: 14px;
+        }
+
+        @keyframes pulsar {
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.15);
+            }
+        }
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .coracao-flutuante {
+            position: fixed;
+            bottom: -30px;
+            font-size: 20px;
+            animation: subir 6s linear infinite;
+            opacity: 0.7;
+            pointer-events: none;
+        }
+
+        @keyframes subir {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 0.7;
+            }
+
+            100% {
+                transform: translateY(-110vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- ========================= -->
+        <!-- TELA DE LOGIN              -->
+        <!-- ========================= -->
+
+        <div class="card" id="login">
+
+            <div class="coracao">❤️</div>
+
+            <h1>Para Anna Lourdes</h1>
+
+            <p class="subtitle">
+                Tem uma coisinha aqui para você...
+            </p>
+
+            <input
+                type="text"
+                id="usuario"
+                placeholder="Usuário"
+            >
+
+            <input
+                type="password"
+                id="senha"
+                placeholder="Senha"
+            >
+
+            <button onclick="entrar()">
+                Entrar ❤️
+            </button>
+
+            <p id="erro">
+                Usuário ou senha incorretos.
+            </p>
+
+        </div>
+
+
+        <!-- ========================= -->
+        <!-- PRIMEIRA ABA               -->
+        <!-- ========================= -->
+
+        <div class="card" id="aba1">
+
+            <div class="coracao">❤️</div>
+
+            <h1>Oi, Lourdinha</h1>
+
+            <div class="texto">
+
+Existem milhões de estrelas e uma lua que brilham muito la fora... 
+
+Mas nada se compara com o brilho que só você possui, e com a luz que transmite só por existir.
+
+            </div>
+
+            <button onclick="proximaAba()">
+                Próximo ❤️
+            </button>
+
+        </div>
+
+
+        <!-- ========================= -->
+        <!-- SEGUNDA ABA               -->
+        <!-- ========================= -->
+
+        <div class="card" id="aba2">
+
+            <div class="coracao">❤️</div>
+
+            <h1>Uma coisa que quero te dizer...</h1>
+
+            <div class="texto">
+
+Na vida, temos poucas certezas.
+
+E uma das certezas que tenho é que quero você na minha vida, hoje e nos dias que ainda estão por vir. Quero viver coisas boas ao seu lado, compartilhar momentos, criar memórias e aproveitar cada instante que a vida nos permitir.
+
+E, acima de tudo, quero fazer você feliz, cuidar de você e estar ao seu lado nos momentos bons e nos difíceis.
+
+Espero que, com o tempo, eu possa olhar para você e dizer, com toda certeza, que em você encontrei a mulher da minha vida. ❤️
+
+            </div>
+
+            <p class="pequeno">
+                Essa é só uma pequena parte do que quero viver com você.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ========================= -->
+    <!-- JAVASCRIPT                 -->
+    <!-- ========================= -->
+
+    <script>
+
+        // LOGIN
+
+        function entrar() {
+
+            const usuario = document.getElementById("usuario").value;
+            const senha = document.getElementById("senha").value;
+
+            if (usuario === "Lourdinha" && senha === "20/04") {
+
+                document.getElementById("login").style.display = "none";
+
+                document.getElementById("aba1").style.display = "block";
+
+            } else {
+
+                document.getElementById("erro").style.display = "block";
+
+            }
+        }
+
+
+        // IR PARA A SEGUNDA ABA
+
+        function proximaAba() {
+
+            document.getElementById("aba1").style.display = "none";
+
+            document.getElementById("aba2").style.display = "block";
+
+        }
+
+
+        // CORAÇÕES FLUTUANTES
+
+        function criarCoracao() {
+
+            const coracao = document.createElement("div");
+
+            coracao.classList.add("coracao-flutuante");
+
+            coracao.innerHTML = "❤️";
+
+            coracao.style.left = Math.random() * 100 + "vw";
+
+            coracao.style.animationDuration =
+                (4 + Math.random() * 4) + "s";
+
+            coracao.style.fontSize =
+                (15 + Math.random() * 20) + "px";
+
+            document.body.appendChild(coracao);
+
+            setTimeout(() => {
+
+                coracao.remove();
+
+            }, 8000);
+        }
+
+        setInterval(criarCoracao, 800);
+
+    </script>
+
+</body>
+</html>
