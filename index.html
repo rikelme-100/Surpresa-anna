@@ -88,7 +88,12 @@
         }
 
         #aba1,
-        #aba2 {
+        #aba2,
+        #aba3,
+        #aba4,
+        #aba5,
+        #aba6,
+        #aba7 {
             display: none;
         }
 
@@ -110,6 +115,13 @@
             margin-top: 20px;
             color: #ddd;
             font-size: 14px;
+        }
+
+        .assinatura {
+            margin-top: 25px;
+            line-height: 1.6;
+            font-style: italic;
+            color: #ffd6eb;
         }
 
         @keyframes pulsar {
@@ -166,7 +178,7 @@
     <div class="container">
 
         <!-- ========================= -->
-        <!-- TELA DE LOGIN              -->
+        <!-- LOGIN                      -->
         <!-- ========================= -->
 
         <div class="card" id="login">
@@ -203,7 +215,7 @@
 
 
         <!-- ========================= -->
-        <!-- PRIMEIRA ABA               -->
+        <!-- ABA 1                      -->
         <!-- ========================= -->
 
         <div class="card" id="aba1">
@@ -220,7 +232,7 @@ Mas nada se compara com o brilho que só você possui, e com a luz que transmite
 
             </div>
 
-            <button onclick="proximaAba()">
+            <button onclick="proximaAba(1)">
                 Próximo ❤️
             </button>
 
@@ -228,7 +240,7 @@ Mas nada se compara com o brilho que só você possui, e com a luz que transmite
 
 
         <!-- ========================= -->
-        <!-- SEGUNDA ABA               -->
+        <!-- ABA 2                      -->
         <!-- ========================= -->
 
         <div class="card" id="aba2">
@@ -247,13 +259,151 @@ E acima de tudo, quero fazer você feliz, cuidar de você e estar ao seu lado no
 
 Espero que com o tempo, eu possa olhar para você e dizer, que com toda certeza, foi em você que encontrei o amor da minha vida. ❤️
 
-Ass: Do seu amor, Ilan Rikelme ❤️
+            </div>
 
+            <div class="assinatura">
+                Ass: Do seu amor, Ilan Rikelme ❤️
+                ops... Ainda não acabou
             </div>
 
             <p class="pequeno">
-                e tudo isso é só uma pequena parte do que quero viver com você.
+                🤍🤍
             </p>
+
+            <button onclick="proximaAba(2)">
+                Próximo ❤️
+            </button>
+
+        </div>
+
+
+        <!-- ========================= -->
+        <!-- ABA 3                      -->
+        <!-- ========================= -->
+
+        <div class="card" id="aba3">
+
+            <div class="coracao">✨</div>
+
+            <h1>Tem mais uma coisa...</h1>
+
+            <div class="texto">
+
+Talvez você ainda não saiba, mas existe muito mais que eu quero te dizer.
+
+            </div>
+
+            <button onclick="proximaAba(3)">
+                Próximo ❤️
+            </button>
+
+        </div>
+
+
+        <!-- ========================= -->
+        <!-- ABA 4                      -->
+        <!-- ========================= -->
+
+        <div class="card" id="aba4">
+
+            <div class="coracao">❤️</div>
+
+            <h1>O que eu quero com você...</h1>
+
+            <div class="texto">
+
+Quero conhecer você, não superficialmente, mas o seu interior.
+Conhecer seus jeitos e suas manias únicas.
+
+Quero compartilhar momentos com você, rir de coisas bobas, criar lembranças que possamos guardar na nossa memória e eternizar tudo isso no nosso córtex cerebral kkkkk.
+
+Quero que, com o tempo, possamos construir algo verdadeiro, que não possa ser apagado por nada, que contenha carinho, respeito, fidelidade, confiança e muita felicidade.
+
+Até porque é isso que eu quero com você, e sempre foi o meu propósito desde o primeiro dia que mandei mensagem para você. ❤️
+
+            </div>
+
+            <button onclick="proximaAba(4)">
+                Próximo ❤️
+            </button>
+
+        </div>
+
+
+        <!-- ========================= -->
+        <!-- ABA 5                      -->
+        <!-- ========================= -->
+
+        <div class="card" id="aba5">
+
+            <div class="coracao">🌹</div>
+
+            <h1>Uma pequena surpresa...</h1>
+
+            <div class="texto">
+
+Ainda tem mais uma coisa que preparei para você.
+
+            </div>
+
+            <button onclick="proximaAba(5)">
+                Próximo ❤️
+            </button>
+
+        </div>
+
+
+        <!-- ========================= -->
+        <!-- ABA 6                      -->
+        <!-- FOTO / EXPLOSÃO           -->
+        <!-- ========================= -->
+
+        <div class="card" id="aba6">
+
+            <div class="coracao">💗</div>
+
+            <h1>Você ❤️</h1>
+
+            <div class="texto">
+
+Aqui vai ficar a surpresa com a sua foto.
+
+            </div>
+
+            <button onclick="proximaAba(6)">
+                Próximo ❤️
+            </button>
+
+        </div>
+
+
+        <!-- ========================= -->
+        <!-- ABA 7                      -->
+        <!-- FINAL                      -->
+        <!-- ========================= -->
+
+        <div class="card" id="aba7">
+
+            <div class="coracao">❤️</div>
+
+            <h1>Você vai me chamar de ansioso... kkkkk</h1>
+
+            <div class="texto">
+
+Mas eu não sei o que o futuro nos espera, não sei o que acontece amanhã ou o que pode acontecer.
+
+Mas eu sei do hoje, e sei o que sinto hoje. E o que sinto é que quero viver muitos capítulos da minha vida ao seu lado. ❤️
+
+Não sei onde isso vai nos levar, mas, se depender de mim, espero que esse seja apenas o começo da nossa história.
+
+            </div>
+
+            <div class="assinatura">
+
+                Com carinho,<br>
+                Ilan Rikelme ❤️
+
+            </div>
 
         </div>
 
@@ -266,12 +416,17 @@ Ass: Do seu amor, Ilan Rikelme ❤️
 
     <script>
 
+        // =========================
         // LOGIN
+        // =========================
 
         function entrar() {
 
-            const usuario = document.getElementById("usuario").value;
-            const senha = document.getElementById("senha").value;
+            const usuario =
+                document.getElementById("usuario").value;
+
+            const senha =
+                document.getElementById("senha").value;
 
             if (usuario === "Lourdinha" && senha === "20/04") {
 
@@ -287,28 +442,38 @@ Ass: Do seu amor, Ilan Rikelme ❤️
         }
 
 
-        // IR PARA A SEGUNDA ABA
+        // =========================
+        // TROCAR DE ABA
+        // =========================
 
-        function proximaAba() {
+        function proximaAba(abaAtual) {
 
-            document.getElementById("aba1").style.display = "none";
+            document.getElementById("aba" + abaAtual).style.display = "none";
 
-            document.getElementById("aba2").style.display = "block";
+            document.getElementById("aba" + (abaAtual + 1)).style.display = "block";
 
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
         }
 
 
+        // =========================
         // CORAÇÕES FLUTUANTES
+        // =========================
 
         function criarCoracao() {
 
-            const coracao = document.createElement("div");
+            const coracao =
+                document.createElement("div");
 
             coracao.classList.add("coracao-flutuante");
 
             coracao.innerHTML = "❤️";
 
-            coracao.style.left = Math.random() * 100 + "vw";
+            coracao.style.left =
+                Math.random() * 100 + "vw";
 
             coracao.style.animationDuration =
                 (4 + Math.random() * 4) + "s";
