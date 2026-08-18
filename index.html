@@ -198,6 +198,16 @@
                 0 8px 20px
                 rgba(255,47,145,0.25);
         }
+        .botao-voltar {
+    background: rgba(255, 255, 255, 0.12);
+    margin-top: 10px;
+    box-shadow: none;
+}
+
+.botao-voltar:hover {
+    background: rgba(255, 255, 255, 0.20);
+    transform: scale(1.02);
+}
 
 
         button:hover {
@@ -866,6 +876,12 @@ Espero que com o tempo, eu possa olhar para você e dizer, que com toda certeza,
                 onclick="proximaAba(2)"
             >
                 Próximo ❤️
+                <button
+    class="botao-voltar"
+    onclick="voltarAba(2)"
+>
+    ← Voltar
+</button>
             </button>
 
         </div>
@@ -906,6 +922,12 @@ Talvez você ainda não saiba, mas existe muito mais que eu quero te dizer.
                 onclick="proximaAba(3)"
             >
                 Próximo ❤️
+                <button
+    class="botao-voltar"
+    onclick="voltarAba(3)"
+>
+    ← Voltar
+</button>
             </button>
 
         </div>
@@ -978,6 +1000,12 @@ Até porque é isso que eu quero com você, e sempre foi o meu propósito desde 
                 onclick="proximaAba(4)"
             >
                 Próximo ❤️
+                <button
+    class="botao-voltar"
+    onclick="voltarAba(4)"
+>
+    ← Voltar
+</button>
             </button>
 
         </div>
@@ -1018,6 +1046,12 @@ Ainda tem mais uma coisa que preparei para você.
                 onclick="proximaAba(5)"
             >
                 Próximo ❤️
+                <button
+    class="botao-voltar"
+    onclick="voltarAba(5)"
+>
+    ← Voltar
+</button>
             </button>
 
         </div>
@@ -1080,6 +1114,12 @@ Van Gogh sabia que o amarelo dos girassóis tinha um brilho diferente. Mas acho 
                 onclick="proximaAba(6)"
             >
                 Próximo ❤️
+                <button
+    class="botao-voltar"
+    onclick="voltarAba(6)"
+>
+    ← Voltar
+</button>
             </button>
 
         </div>
@@ -1136,6 +1176,19 @@ Eu amo Você, Anna Lourdes Do Nascimento Egito.
                 Ilan Rikelme ❤️
 
             </div>
+            <button
+    class="botao-voltar"
+    onclick="voltarAba(7)"
+>
+    ← Voltar
+</button>
+
+<button
+    onclick="voltarInicio()"
+>
+    ↺ Voltar ao início
+</button>
+            
 
         </div>
 
@@ -1350,6 +1403,94 @@ Eu amo Você, Anna Lourdes Do Nascimento Egito.
                 500
             );
         }
+        /* =========================
+   VOLTAR PÁGINA
+========================= */
+
+function voltarAba(abaAtual) {
+
+    const atual =
+        document.getElementById(
+            "aba" + abaAtual
+        );
+
+    const anterior =
+        document.getElementById(
+            "aba" + (abaAtual - 1)
+        );
+
+    const transicao =
+        document.getElementById(
+            "transicao"
+        );
+
+    transicao.classList.add("ativa");
+
+    setTimeout(() => {
+
+        atual.style.display = "none";
+
+        anterior.style.display = "block";
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+        transicao.classList.remove("ativa");
+
+    }, 500);
+}
+
+
+/* =========================
+   VOLTAR AO INÍCIO
+========================= */
+
+function voltarInicio() {
+
+    const transicao =
+        document.getElementById(
+            "transicao"
+        );
+
+    transicao.classList.add("ativa");
+
+    setTimeout(() => {
+
+        for (let i = 1; i <= 7; i++) {
+
+            const aba =
+                document.getElementById(
+                    "aba" + i
+                );
+
+            if (aba) {
+                aba.style.display = "none";
+            }
+        }
+
+        document.getElementById("login")
+            .style.display = "block";
+
+        document.getElementById("usuario")
+            .value = "";
+
+        document.getElementById("senha")
+            .value = "";
+
+        document.getElementById("erro")
+            .style.display = "none";
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+        transicao.classList.remove("ativa");
+
+    }, 500);
+}
 
 
         /* =========================
